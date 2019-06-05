@@ -11,7 +11,7 @@
 
 5.  You can test some urls below to search git issues
     - ```https://github.com/facebook/react```
-    - ```https://github.com/axiomzen/cc_IssuesExplorerFE_Empty```
+    - ```https://github.com/highcharts/highcharts```
 
 6.  On ```/issue_explorer/src/config.js``` you can setup the number of issues displayed
     per page ```GIT_ISSUE_PER_PAGE``` max is 100. I also provide pagination next and previous buttons.
