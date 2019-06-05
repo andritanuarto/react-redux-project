@@ -1,0 +1,80 @@
+.page {
+  &--issue-search {
+    background: $color-amaranth;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    & > span {
+      display: flex;
+      flex: 1;
+    }
+    .container-search {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 10px;
+      h1 {
+        font-size: $font-size-xl;
+        font-family: $font-bold;
+        color: $color-white;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      &--input-container {
+        position: relative;
+        max-width: 590px;
+        width: 100%;
+        margin: 0 auto;
+        svg {
+          position: absolute;
+          left: 15px;
+          top: 23px;
+        }
+        .error-message {
+          font-size: 12px;
+          margin-top: 5px;
+          display: block;
+          width: 100%;
+          color: $color-white;
+          position: relative;
+          span {
+            position: absolute;
+            right: 0;
+            top: 5px;
+          }
+        }
+        .container-search--input {
+          background: $color-white;
+          border: none;
+          width: 100%;
+          height: 65px;
+          font-size: 25px;
+          padding: 0 10px 0 50px;
+          box-sizing: border-box;
+          outline: 0;
+          transition: 1s background;
+          &::placeholder {
+            color: $color-geyser;
+          }
+          &.input-error {
+            background: $color-rose-bud-cherry;
+          }
+        }
+      }
+      @media only screen and (max-width: $device-ipad) {
+        h1 {
+          font-size: $font-size-lg;
+        }
+        &--input-container {
+          svg {
+            top: 9px;
+          }
+          input {
+            height: 40px;
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}

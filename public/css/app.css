@@ -1,0 +1,370 @@
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url("./fonts/montserrat-regular.woff") format("woff"), url("./fonts/montserrat-regular.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url("./fonts/montserrat-bold.woff") format("woff"), url("./fonts/montserrat-bold.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'MontserratLight';
+  src: url("./fonts/montserrat-light.woff") format("woff"), url("./fonts/montserrat-light.woff2") format("woff2"); }
+
+.loading-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #E91E63;
+  z-index: 2; }
+  .loading-overlay.white {
+    background: #FFFFFF; }
+    .loading-overlay.white .spinner > div {
+      background-color: #000000; }
+  .loading-overlay .spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    z-index: 2; }
+    .loading-overlay .spinner > div {
+      background-color: #FFFFFF;
+      height: 100%;
+      width: 6px;
+      display: inline-block;
+      -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+      animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+    .loading-overlay .spinner .rect2 {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s; }
+    .loading-overlay .spinner .rect3 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s; }
+    .loading-overlay .spinner .rect4 {
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s; }
+    .loading-overlay .spinner .rect5 {
+      -webkit-animation-delay: -0.8s;
+      animation-delay: -0.8s; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
+
+.issue-card {
+  float: left; }
+  .issue-card::after {
+    clear: both; }
+  @media only screen and (min-width: 1280px) {
+    .issue-card {
+      width: 20%; } }
+  @media only screen and (max-width: 1280px) {
+    .issue-card {
+      width: 33.33%; } }
+  @media only screen and (max-width: 768px) {
+    .issue-card {
+      width: 50%; } }
+  @media only screen and (max-width: 650px) {
+    .issue-card {
+      width: 100%; } }
+  .issue-card--content {
+    padding: 0 15px 40px 15px; }
+    .issue-card--content--inner {
+      text-align: left;
+      height: 215px;
+      -webkit-box-shadow: -1px 11px 39px -19px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px 11px 39px -19px rgba(0, 0, 0, 0.75);
+      box-shadow: -1px 11px 39px -19px rgba(0, 0, 0, 0.75);
+      position: relative; }
+    .issue-card--content--state {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      position: absolute;
+      top: 10px;
+      right: 15px; }
+      .issue-card--content--state li {
+        float: left;
+        margin-left: 10px; }
+    .issue-card--content--title, .issue-card--content--description {
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      margin: 0 auto;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .issue-card--content--title {
+      font-family: "MontserratRegular", Helvetica, sans-serif;
+      font-size: 18px;
+      color: #FFFFFF;
+      background-color: #3F51B5;
+      padding: 10px;
+      margin-bottom: 5px;
+      max-height: 47px;
+      -webkit-line-clamp: 2; }
+      .issue-card--content--title--padding-right {
+        padding-right: 45px; }
+    .issue-card--content--description {
+      padding: 0 10px;
+      height: 95px;
+      font-size: 12px;
+      line-height: 20px;
+      -webkit-line-clamp: 5; }
+      .issue-card--content--description--no-description {
+        color: #CFD8DC; }
+    .issue-card--content--tags {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      margin: 0;
+      list-style-type: none;
+      height: 30px;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+      .issue-card--content--tags--tag {
+        display: inline-block;
+        background: #E91E63;
+        color: #FFFFFF;
+        font-family: "MontserratLight", Helvetica, sans-serif;
+        font-size: 9px;
+        padding: 3px 5px;
+        border-radius: 5px;
+        margin-left: 10px; }
+        .issue-card--content--tags--tag-hole, .issue-card--content--tags--tag-label {
+          position: relative;
+          top: -1px; }
+        .issue-card--content--tags--tag-hole {
+          width: 5px;
+          height: 5px;
+          position: relative;
+          top: -1px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 5px;
+          background: #FFFFFF;
+          margin-right: 5px; }
+
+html, body, #root, .main-container {
+  min-width: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  color: #455A64; }
+
+body {
+  font-family: "MontserratRegular", Helvetica, sans-serif;
+  font-size: 9px;
+  color: #607D8B; }
+
+button {
+  outline: 0;
+  cursor: pointer; }
+
+#root {
+  flex: 1;
+  display: flex; }
+  #root .main-container {
+    flex: 1;
+    display: flex; }
+    #root .main-container .page {
+      flex: 1; }
+
+.fade-enter {
+  opacity: 0.01; }
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in; }
+
+.fade-leave {
+  opacity: 1; }
+  .fade-leave.fade-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in; }
+
+.fade-appear {
+  opacity: 0.01; }
+  .fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in; }
+
+.page--issue-search {
+  background: #E91E63;
+  text-align: center;
+  display: flex;
+  align-items: center; }
+  .page--issue-search > span {
+    display: flex;
+    flex: 1; }
+  .page--issue-search .container-search {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 10px; }
+    .page--issue-search .container-search h1 {
+      font-size: 48px;
+      font-family: "MontserratBold", Helvetica, sans-serif;
+      color: #FFFFFF;
+      margin-top: 0;
+      margin-bottom: 5px; }
+    .page--issue-search .container-search--input-container {
+      position: relative;
+      max-width: 590px;
+      width: 100%;
+      margin: 0 auto; }
+      .page--issue-search .container-search--input-container svg {
+        position: absolute;
+        left: 15px;
+        top: 23px; }
+      .page--issue-search .container-search--input-container .error-message {
+        font-size: 12px;
+        margin-top: 5px;
+        display: block;
+        width: 100%;
+        color: #FFFFFF;
+        position: relative; }
+        .page--issue-search .container-search--input-container .error-message span {
+          position: absolute;
+          right: 0;
+          top: 5px; }
+      .page--issue-search .container-search--input-container .container-search--input {
+        background: #FFFFFF;
+        border: none;
+        width: 100%;
+        height: 65px;
+        font-size: 25px;
+        padding: 0 10px 0 50px;
+        box-sizing: border-box;
+        outline: 0;
+        transition: 1s background; }
+        .page--issue-search .container-search--input-container .container-search--input::placeholder {
+          color: #CFD8DC; }
+        .page--issue-search .container-search--input-container .container-search--input.input-error {
+          background: #880e4f; }
+    @media only screen and (max-width: 768px) {
+      .page--issue-search .container-search h1 {
+        font-size: 28px; }
+      .page--issue-search .container-search--input-container svg {
+        top: 9px; }
+      .page--issue-search .container-search--input-container input {
+        height: 40px;
+        font-size: 19px; } }
+
+.page--issue-results {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
+  overflow: hidden; }
+  .page--issue-results .loading-overlay {
+    margin-top: 45px; }
+  .page--issue-results header {
+    padding: 0 15px;
+    height: 50px;
+    background-color: #E91E63;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .page--issue-results header h2 {
+      font-family: "MontserratBold", Helvetica, sans-serif;
+      font-size: 24px;
+      color: #FFFFFF;
+      margin: 0;
+      cursor: pointer; }
+    .page--issue-results header span {
+      font-family: "MontserratLight", Helvetica, sans-serif;
+      font-size: 18px;
+      color: #880e4f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    @media only screen and (max-width: 768px) {
+      .page--issue-results header {
+        display: block;
+        height: auto;
+        padding: 0;
+        padding: 10px 15px; }
+        .page--issue-results header span, .page--issue-results header strong {
+          display: block; }
+        .page--issue-results header strong {
+          font-size: 18px; }
+        .page--issue-results header span {
+          font-size: 12px; } }
+  .page--issue-results .issues-filters {
+    padding: 0 15px;
+    height: 80px;
+    position: relative; }
+    .page--issue-results .issues-filters--close {
+      background: 0;
+      border: 0;
+      position: absolute;
+      right: 15px;
+      top: 20px; }
+    .page--issue-results .issues-filters ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 25px; }
+      @media only screen and (max-width: 768px) {
+        .page--issue-results .issues-filters ul {
+          bottom: 20px; } }
+      .page--issue-results .issues-filters ul li {
+        display: inline-block;
+        margin-right: 20px; }
+        .page--issue-results .issues-filters ul li button {
+          background: none;
+          border: none;
+          padding: 0;
+          outline: 0;
+          transition: all 0.5s; }
+          .page--issue-results .issues-filters ul li button:hover {
+            color: #CFD8DC; }
+          .page--issue-results .issues-filters ul li button.active {
+            color: #E91E63; }
+  .page--issue-results .issues-container {
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+    align-items: stretch; }
+    .page--issue-results .issues-container--no-result {
+      font-size: 20px;
+      margin-top: 50px;
+      display: block; }
+    .page--issue-results .issues-container--page-buttons {
+      display: block;
+      clear: both; }
+      .page--issue-results .issues-container--page-buttons button {
+        display: inline-block;
+        background: none;
+        border: none;
+        background: #455A64;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        margin: 10px 10px 50px 10px;
+        border-radius: 2px;
+        transition: 0.5s background; }
+        .page--issue-results .issues-container--page-buttons button:hover {
+          background: #607D8B; }

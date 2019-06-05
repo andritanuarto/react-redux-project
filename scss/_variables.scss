@@ -1,0 +1,54 @@
+// Colors - I use color name generator http://chir.ag/projects/name-that-color/
+$color-jacksons-purple:   #1A237E;
+$color-san-marino:        #3F51B5;
+$color-rose-bud-cherry:   #880e4f;
+$color-amaranth:          #E91E63;
+$color-fiord:             #455A64;
+$color-lynch:             #607D8B;
+$color-geyser:            #CFD8DC;
+$color-white:             #FFFFFF;
+$color-dust-storm:        #E4C8C8;
+$color-black:             #000000;
+$color-smoke:             rgba(0,0,0,0.75);
+
+// Fonts
+$font-regular-url:  url('./fonts/montserrat-regular.woff') format('woff'),
+                    url('./fonts/montserrat-regular.woff2') format('woff2');
+
+$font-bold-url:     url('./fonts/montserrat-bold.woff') format('woff'),
+                    url('./fonts/montserrat-bold.woff2') format('woff2');
+
+$font-light-url:    url('./fonts/montserrat-light.woff') format('woff'),
+                    url('./fonts/montserrat-light.woff2') format('woff2');
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: $font-regular-url;
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: $font-bold-url;
+}
+
+@font-face {
+  font-family: 'MontserratLight';
+  src: $font-light-url
+}
+
+$font-regular:              'MontserratRegular', Helvetica, sans-serif;
+$font-bold:                 'MontserratBold', Helvetica, sans-serif;
+$font-light:                'MontserratLight', Helvetica, sans-serif;
+
+$font-size-xl:              48px;
+$font-size-lg:              28px;
+$font-size-md:              24px;
+$font-size-sm:              18px;
+$font-size-xs:              12px;
+$font-size-ss:              9px;
+
+// Device widths
+$device-macbook13inch:      1280px;
+$device-ipad-pro:           1240px;
+$device-ipad:               768px;
+$device-small-tablet:       650px;
